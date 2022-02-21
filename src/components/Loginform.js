@@ -25,7 +25,7 @@ function Loginform({check,user,handleUsercurrent,handleChecklogin}) {
             return f.username === values.userName && f.password === values.passWord
           })
           if (checkResult.length<1 || checkResult === undefined){
-            window.location.reload();
+            window.location.href="/";
             // window.onload()
             window.alert("Sai thông tin tài khoản mật khẩu rồi bạn :>")
           }
