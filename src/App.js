@@ -32,7 +32,7 @@ function App() {
 //   },[])
 
   return (   
-    <HashRouter>
+    <BrowserRouter>
       {/* <Router user={user} handleUsercurrent={handleUsercurrent} userCurrent={userCurrent}> */}
         <Router>
         <Notfound />
@@ -43,7 +43,7 @@ function App() {
         } */}
       </Router>
       
-    </HashRouter>
+    </BrowserRouter>
     // <BrowserRouter>
   );
 }
