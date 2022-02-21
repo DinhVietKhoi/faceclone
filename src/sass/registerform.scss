@@ -1,0 +1,53 @@
+.registerform{
+    background-color: #fff;
+    box-shadow: 0 1px 2px rgb(123, 120, 120);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 430px;
+    top:calc(-50% - 200px);
+    left: calc( 50% - 215px );
+    padding: 15px;
+    border-radius: 10px;
+    &__group{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        margin-bottom: 15px;
+        & i{
+            font-size: 36px;
+            cursor: pointer;
+        }
+    }
+    & label{
+        font-size: 24px;
+        font-weight: bold;
+    }
+    & input{
+        outline: none;
+        border: 1px solid rgb(184, 178, 178);
+        border-radius: 10px;
+        width: 100%;
+        padding:15px;
+        margin: 8px 0;
+    }
+    & button{
+        border-radius: 10px;
+        padding: 15px;
+        width: 30%;
+        cursor: pointer;
+        font-weight: bold;
+        color:#fff;
+        background-color: #42B72A;
+        opacity: 0.8;
+        transition: all 0.3s;
+        border: none;
+        &:hover{
+            opacity: 1;
+        }
+    }
+}
