@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import '../sass/header.scss'
 import Avatar from './Avatar'
-function Header({userCurrent,user,handleChecklogin}) {
+function Header({userCurrent,user,handleChecklogin,img}) {
   return (
     <div className='header'>
       <div className="container">
@@ -49,7 +49,7 @@ function Header({userCurrent,user,handleChecklogin}) {
           </div>
           <div className='header__right'>
             <div className='header__right-user'>
-              <Avatar />
+              <Avatar img={img}/>
               <span className='header__right-nickname'>{userCurrent}</span>
             </div>
             <ul className='header__right-list'>

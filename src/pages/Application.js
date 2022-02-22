@@ -49,7 +49,7 @@ function Application() {
           checkLogin === false && <Login user={user} handleUsercurrent={handleUsercurrent} handleChecklogin={handleChecklogin}/>
         }
         {
-        checkLogin === true &&<Home userCurrent={userCurrent} user={user} handleChecklogin={handleChecklogin}/>
+          checkLogin === true &&<Home userCurrent={userCurrent} user={user} handleChecklogin={handleChecklogin}/>
         }
     </>
   )

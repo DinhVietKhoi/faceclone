@@ -1,0 +1,44 @@
+.story{
+    &__container{
+        position: relative;
+        box-shadow: 0px 0px 3px 2px #a49595;
+        width: 100%;
+        height: 200px;
+        padding:10px 0 10px 10px;
+        cursor: pointer;
+        border-radius: 10px;
+        overflow: hidden;
+        &:hover > .story__img{
+            transform: scale(1.2);
+            filter: brightness(70%);
+        }
+        & span{
+            color:#fff;
+            font-weight: bold;
+        }
+    }
+    &__img{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top:0;
+        left:0;
+        z-index: 1;
+        object-fit: cover;
+        border-radius: 10px;
+        transition: all 0.3s;
+
+    }
+    &__content{
+        padding: 10px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: absolute;
+        z-index: 1;
+        top:0;
+        left:0;
+    }
+}

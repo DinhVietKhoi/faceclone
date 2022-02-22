@@ -1,21 +1,23 @@
 import React from 'react'
-import Listfriend from '../components/Listfriend'
-import Post from '../components/Post'
+import Listuser from '../components/Listuser'
+import Posts from '../components/Posts'
 import Shortcut from '../components/Shortcut'
-
-function Body({userCurrent}) {
+import Stories from '../components/Stories'
+import '../sass/body.scss'
+function Body({user,userCurrent,img}) {
   return (
     <div className='body'>
               <div className="container">
                 <div className='body__container'>
                   <div className='body__left'>
-                    <Shortcut userCurrent={userCurrent}/>
+                    <Shortcut userCurrent={userCurrent} img={img}/>
                   </div>
                   <div className='body__middle'>
-                    <Post />
+                    <Stories img={img}/>
+                    <Posts img={img} userCurrent={userCurrent}/>
                   </div>
                   <div className='body__right'>
-                    <Listfriend />
+                    <Listuser user={user} img={img}/>
                   </div>
                 </div>
               </div>

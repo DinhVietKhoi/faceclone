@@ -15,6 +15,14 @@ const firebaseConfig = {
   messagingSenderId: "12655981992",
   appId: "1:12655981992:web:c6d4f7d6755c97bcdbd99d",
   measurementId: "G-Y32FBCKVG3"
+  // apiKey: process.env.API,
+  // authDomain: process.env.AUTH,
+  // databaseURL: process.env.DATABASE,
+  // projectId: process.env.PROJECT,
+  // storageBucket: process.env.STORAGE,
+  // messagingSenderId: process.env.MESS,
+  // appId: process.env.APP,
+  // measurementId: process.env.MEAS
 };
 
 // Initialize Firebase

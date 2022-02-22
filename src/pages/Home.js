@@ -1,23 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Header from '../components/Header'
-import Listfriend from '../components/Listfriend'
 import Notfound from '../components/Notfound'
-import Post from '../components/Post'
-import Shortcut from '../components/Shortcut'
 import Router from '../router/Router'
 import '../sass/home.scss'
 import Body from './Body'
 function Home({userCurrent,user,handleChecklogin}) {
+  const [img,setImg] = useState("https://static2.yan.vn/YanNews/2167221/202102/facebook-cap-nhat-avatar-doi-voi-tai-khoan-khong-su-dung-anh-dai-dien-e4abd14d.jpg")
+
   return (
     <>
-      <Header userCurrent={userCurrent} user={user} handleChecklogin={handleChecklogin}/>
-        
+      <Header userCurrent={userCurrent} user={user} handleChecklogin={handleChecklogin} img={img}/>
         {/* <Router user={user} handleUsercurrent={handleUsercurrent} userCurrent={userCurrent}> */}
-          <Router userCurrent={userCurrent}>
+          <Router user={user} userCurrent={userCurrent} img={img}>
             <Notfound />
             <Body />
           </Router>
-      
     </>
   )
 }

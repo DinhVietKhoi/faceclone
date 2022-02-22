@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../sass/avatar.scss'
-function Avatar() {
+function Avatar({img}) {
+  const [imgg,setImg] = useState("");
+  
   return (
     <div className="avatar">
-        <img src="https://static2.yan.vn/YanNews/2167221/202102/facebook-cap-nhat-avatar-doi-voi-tai-khoan-khong-su-dung-anh-dai-dien-e4abd14d.jpg"></img>
+      {
+        <img src={img}></img>
+      }
     </div>
   )
 }

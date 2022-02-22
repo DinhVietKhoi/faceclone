@@ -13,7 +13,7 @@ import star from '../assets/star.png'
 import watch from '../assets/watch.png'
 import weather from '../assets/weather.png'
 
-function Shortcut({userCurrent}) {
+function Shortcut({userCurrent,img}) {
   const [check,setCheck] = useState(false)
   const [check1,setCheck1] = useState(false)
   const [extent,setExtent] = useState(3)
@@ -98,7 +98,7 @@ function Shortcut({userCurrent}) {
           <ul className='shortcut__top-list'>
             <li className='shortcut__top-item'>
               <Link className='shortcut__top-link' to="/faceclone/Friend">
-                <Avatar />
+                <Avatar img={img}/>
                 <span>{userCurrent}</span>
               </Link>
             </li>
@@ -140,8 +140,8 @@ function Shortcut({userCurrent}) {
           <ul className='shortcut__top-list'>
             {
             listGroup.map((l,index)=>[
-              index<=extent1&&<li className='shortcut__top-item'>
-              <Link className='shortcut__top-link' to="faceclone/Group">
+              index<=extent1&&<li key={index} className='shortcut__top-item'>
+              <Link className='shortcut__top-link' to="/faceclone/Group">
                     <img className="shortcut__top-icon" src={group}></img>
                     <span>{l}</span>
               </Link>
@@ -162,7 +162,7 @@ function Shortcut({userCurrent}) {
               check1===true&&<li className='shortcut__top-item' onClick={handleZoomout1}>
               <div className='shortcut__top-link'>
                 <div className='shortcut__top-i'>
-                  <i class="fa-solid fa-angles-up"></i>
+                  <i className="fa-solid fa-angles-up"></i>
                 </div>
                 <span>Rút gọn</span>
               </div>

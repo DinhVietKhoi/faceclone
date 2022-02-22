@@ -3,6 +3,7 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
+
 }
 ul{
     padding: 0;
@@ -43,7 +44,11 @@ ul{
 }
 .c-2{
     flex: 0 0 16.6666666666667%;
-    max-width: 16.6666666666667%;;
+    max-width: 16.6666666666667%;
+}
+.c-2_4{
+    flex: 0 0 20%;
+    max-width: 20%;
 }
 .c-3{
     flex:0 0 25%;
