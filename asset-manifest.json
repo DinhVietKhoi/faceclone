@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/faceclone/static/css/main.fb91f24f.css",
-    "main.js": "/faceclone/static/js/main.5f2b0600.js",
+    "main.css": "/faceclone/static/css/main.f960ff60.css",
+    "main.js": "/faceclone/static/js/main.01ed5603.js",
+    "static/media/notfound.jpg": "/faceclone/static/media/notfound.a7a02c022931b32eb488.jpg",
     "index.html": "/faceclone/index.html",
-    "main.fb91f24f.css.map": "/faceclone/static/css/main.fb91f24f.css.map",
-    "main.5f2b0600.js.map": "/faceclone/static/js/main.5f2b0600.js.map"
+    "main.f960ff60.css.map": "/faceclone/static/css/main.f960ff60.css.map",
+    "main.01ed5603.js.map": "/faceclone/static/js/main.01ed5603.js.map"
   },
   "entrypoints": [
-    "static/css/main.fb91f24f.css",
-    "static/js/main.5f2b0600.js"
+    "static/css/main.f960ff60.css",
+    "static/js/main.01ed5603.js"
   ]
 }
