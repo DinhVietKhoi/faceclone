@@ -30,6 +30,7 @@ function Loginform({check,user,handleUsercurrent,handleChecklogin}) {
             window.alert("Sai thông tin tài khoản mật khẩu rồi bạn :>")
           }
           else{
+            window.location.href="/faceclone/";
             inputUsername.current.value=""
             inputPassword.current.value=""
             handleUsercurrent(values.userName)  
