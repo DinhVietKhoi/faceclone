@@ -25,14 +25,14 @@ function Loginform({check,user,handleUsercurrent,handleChecklogin}) {
             return f.username === values.userName && f.password === values.passWord
           })
           if (checkResult.length<1 || checkResult === undefined){
-            window.location.href="/faceclone";
+            window.location.href="/faceclone/";
             // window.onload()
             window.alert("Sai thông tin tài khoản mật khẩu rồi bạn :>")
           }
           else{
             inputUsername.current.value=""
             inputPassword.current.value=""
-            handleUsercurrent(values.userName)
+            handleUsercurrent(values.userName)  
             handleChecklogin()
           }
           

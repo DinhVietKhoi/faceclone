@@ -7,6 +7,7 @@ import db  from './Firebase'
 import Home from './pages/Home';
 import Notfound from './components/Notfound';
 import Application from './pages/Application';
+import Header from './components/Header';
 function App() {
 //   const [user,setUser] = useState([])
 //   let [userCurrent,setUsercurrent] = useState("");
@@ -33,16 +34,15 @@ function App() {
 
   return (   
     <BrowserRouter>
+      {/* <Header /> */}
       {/* <Router user={user} handleUsercurrent={handleUsercurrent} userCurrent={userCurrent}> */}
-        <Router>
-        <Notfound />
-        <Application />
+        {/* <Router> */}
         {/* {checkLogin === false&&<Login user={user} handleUsercurrent={handleUsercurrent} handleChecklogin={handleChecklogin}/>}
         {
         checkLogin===true&&<Home userCurrent={userCurrent} user={user} handleChecklogin={handleChecklogin}/>
         } */}
-      </Router>
-      
+        {/* </Router> */}
+        <Application />
     </BrowserRouter>
     // <BrowserRouter>
   );

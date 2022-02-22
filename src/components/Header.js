@@ -1,18 +1,16 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useRef, useState } from 'react'
+import { Link, NavLink } from 'react-router-dom'
 import '../sass/header.scss'
 import Avatar from './Avatar'
 function Header({userCurrent,user,handleChecklogin}) {
-  console.log(userCurrent);
-  console.log(user);
-
+  
   return (
     <div className='header'>
       <div className="container">
         <div className='header__container'>
           <div className="header__left">
             <div className="header__left-logo">
-              <Link to="/faceclone">
+              <Link to="/faceclone/">
                 <i className="fa-brands fa-facebook-f"></i>
               </Link>
             </div>
@@ -22,31 +20,31 @@ function Header({userCurrent,user,handleChecklogin}) {
             </div>
           </div>
           <div className='header__middle'>
-            <ul className='header__middle-list'>
+            <ul className='header__middle-list' >
               <li className='header__middle-item '>
-                <Link className='header__middle-link header__middle-link--active' to="/faceclone"> 
-                  <i class="fa-solid fa-house"></i>
-                </Link>
+                <NavLink className='header__middle-link' to="/faceclone/" activeClassName="active"> 
+                  <i className="fa-solid fa-house"></i>
+                </NavLink>
               </li>
               <li className='header__middle-item'>
-                <Link className='header__middle-link' to="/faceclone"> 
-                  <i class="fa-solid fa-user-group"></i>
-                </Link>
+                <NavLink className='header__middle-link' to="/faceclone/Friend" activeClassName="active" >
+                  <i className="fa-solid fa-user-group"></i>
+                </NavLink>
               </li>
               <li className='header__middle-item'>
-                <Link className='header__middle-link' to="/faceclone"> 
-                  <i class="fa-solid fa-clapperboard"></i>
-                </Link>
+                <NavLink className='header__middle-link' to="/faceclone/Watch"  activeClassName="active">
+                  <i className="fa-solid fa-clapperboard"></i>
+                </NavLink>
               </li>
               <li className='header__middle-item'>
-                <Link className='header__middle-link' to="/faceclone"> 
-                  <i class="fa-solid fa-store"></i>
-                </Link>
+                <NavLink className='header__middle-link' to="/faceclone/Marketplace"  activeClassName="active">
+                  <i className="fa-solid fa-store"></i>
+                </NavLink>
               </li>
               <li className='header__middle-item'>
-                <Link className='header__middle-link' to="/faceclone"> 
-                  <i class="fa-solid fa-chess-board"></i>
-                </Link>
+                <NavLink className='header__middle-link' to="/faceclone/Game" activeClassName="active"> 
+                  <i className="fa-solid fa-chess-board"></i>
+                </NavLink>
               </li>
             </ul>
           </div>
@@ -66,7 +64,7 @@ function Header({userCurrent,user,handleChecklogin}) {
                 <i className="fa-solid fa-bell"></i>
               </li>
               <li className='header__right-item'>
-                <i class="fa-solid fa-arrow-right-from-bracket" onClick={handleChecklogin}></i>
+                <i className="fa-solid fa-arrow-right-from-bracket" onClick={handleChecklogin}></i>
               </li>
             </ul>
           </div>

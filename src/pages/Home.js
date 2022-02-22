@@ -1,28 +1,22 @@
 import React from 'react'
 import Header from '../components/Header'
 import Listfriend from '../components/Listfriend'
+import Notfound from '../components/Notfound'
 import Post from '../components/Post'
 import Shortcut from '../components/Shortcut'
+import Router from '../router/Router'
 import '../sass/home.scss'
+import Body from './Body'
 function Home({userCurrent,user,handleChecklogin}) {
   return (
     <>
       <Header userCurrent={userCurrent} user={user} handleChecklogin={handleChecklogin}/>
-      <div className='body'>
-        <div class="container">
-          <div className='body__container'>
-            <div className='body__left'>
-              <Shortcut />
-            </div>
-            <div className='body__middle'>
-              <Post />
-            </div>
-            <div className='body__right'>
-              <Listfriend />
-            </div>
-          </div>
-        </div>
-      </div>
+        
+        {/* <Router user={user} handleUsercurrent={handleUsercurrent} userCurrent={userCurrent}> */}
+          <Router>
+            <Notfound />
+            <Body />
+          </Router>
       
     </>
   )

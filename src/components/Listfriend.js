@@ -2,7 +2,7 @@ import React from 'react'
 
 function Listfriend() {
   return (
-    <div>L</div>
+    <div>Listfriend</div>
   )
 }
 
