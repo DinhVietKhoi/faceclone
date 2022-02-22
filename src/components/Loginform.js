@@ -25,8 +25,8 @@ function Loginform({check,user,handleUsercurrent,handleChecklogin}) {
             return f.username === values.userName && f.password === values.passWord
           })
           if (checkResult.length<1 || checkResult === undefined){
-            window.location.href="/faceclone/";
-            // window.onload()
+            inputUsername.current.value=""
+            inputPassword.current.value=""
             window.alert("Sai thông tin tài khoản mật khẩu rồi bạn :>")
           }
           else{
