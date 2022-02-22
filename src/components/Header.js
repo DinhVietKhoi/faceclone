@@ -12,7 +12,7 @@ function Header({userCurrent,user,handleChecklogin}) {
         <div className='header__container'>
           <div className="header__left">
             <div className="header__left-logo">
-              <Link to="/">
+              <Link to="/faceclone">
                 <i className="fa-brands fa-facebook-f"></i>
               </Link>
             </div>
@@ -24,27 +24,27 @@ function Header({userCurrent,user,handleChecklogin}) {
           <div className='header__middle'>
             <ul className='header__middle-list'>
               <li className='header__middle-item '>
-                <Link className='header__middle-link header__middle-link--active' to="/"> 
+                <Link className='header__middle-link header__middle-link--active' to="/faceclone"> 
                   <i class="fa-solid fa-house"></i>
                 </Link>
               </li>
               <li className='header__middle-item'>
-                <Link className='header__middle-link' to="/Friend"> 
+                <Link className='header__middle-link' to="/faceclone"> 
                   <i class="fa-solid fa-user-group"></i>
                 </Link>
               </li>
               <li className='header__middle-item'>
-                <Link className='header__middle-link' to="/Watch"> 
+                <Link className='header__middle-link' to="/faceclone"> 
                   <i class="fa-solid fa-clapperboard"></i>
                 </Link>
               </li>
               <li className='header__middle-item'>
-                <Link className='header__middle-link' to="/Marketplace"> 
+                <Link className='header__middle-link' to="/faceclone"> 
                   <i class="fa-solid fa-store"></i>
                 </Link>
               </li>
               <li className='header__middle-item'>
-                <Link className='header__middle-link' to="/Game"> 
+                <Link className='header__middle-link' to="/faceclone"> 
                   <i class="fa-solid fa-chess-board"></i>
                 </Link>
               </li>

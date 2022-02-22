@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 function Notfound() {
   return (
-    <Link to="/">bắt đầu thôi</Link>
+    <Link to="/faceclone">bắt đầu thôi</Link>
   )
 }
 

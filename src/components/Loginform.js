@@ -67,7 +67,7 @@ function Loginform({check,user,handleUsercurrent,handleChecklogin}) {
           )
         }
         <button type="submit">Log in</button>
-        <Link to="/Forgot-password" >Forgot password?</Link>
+        <Link to="/faceclone/Forgot-password" >Forgot password?</Link>
         <button onClick={check}>Create a new account</button>
     </form>
   )
