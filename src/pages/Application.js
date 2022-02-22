@@ -11,24 +11,27 @@ import Header from '../components/Header';
 
 function Application() {
   //Check login storelocal
-  const storeCheck = localStorage.getItem('checkLogin');
-  const Kq = JSON.parse(storeCheck);
+  // console.log('hhiih',Kq);
+  const storeCheck = JSON.parse(localStorage.getItem('checkLogin'));
   //Get user firebase
   const [user,setUser] = useState([])
 
   //get user hien tai
-  let [userCurrent,setUsercurrent] = useState("");
+  const [userCurrent,setUsercurrent] = useState(false);
   const handleUsercurrent = (u)=>{
     setUsercurrent(u);
   }
-  const [checkLogin,setChecklogin] = useState(Kq)
+  
+  let [checkLogin,setChecklogin] = useState(false)
   const handleChecklogin = ()=>{
     const checkLogin1 = !checkLogin;
-    const checkLogin2 = JSON.stringify(checkLogin1)
-    localStorage.setItem("checkLogin", checkLogin2)
-    setChecklogin(checkLogin1);
+    // const checkLogin2 = JSON.stringify(checkLogin1)
+    // localStorage.setItem("checkLogin", checkLogin2)
+      setChecklogin(checkLogin1);
+    
   }
-
+  // console.log("local",storeCheck)
+  // console.log("usestate",checkLogin)
   useEffect(()=>{
 // Get database 
   onValue((ref(db,'user')),(snapshot)=>{
@@ -47,9 +50,11 @@ function Application() {
     // </>
     
     <>
-        {Kq === false&&<Login user={user} handleUsercurrent={handleUsercurrent} handleChecklogin={handleChecklogin}/>}
         {
-        Kq === true &&<Home userCurrent={userCurrent} user={user} handleChecklogin={handleChecklogin}/>
+          checkLogin === false && <Login user={user} handleUsercurrent={handleUsercurrent} handleChecklogin={handleChecklogin}/>
+        }
+        {
+        checkLogin === true &&<Home userCurrent={userCurrent} user={user} handleChecklogin={handleChecklogin}/>
         }
     </>
   )
