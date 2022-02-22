@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/faceclone/static/css/main.fb91f24f.css",
-    "main.js": "/faceclone/static/js/main.951fcbab.js",
+    "main.js": "/faceclone/static/js/main.40f7454b.js",
     "index.html": "/faceclone/index.html",
     "main.fb91f24f.css.map": "/faceclone/static/css/main.fb91f24f.css.map",
-    "main.951fcbab.js.map": "/faceclone/static/js/main.951fcbab.js.map"
+    "main.40f7454b.js.map": "/faceclone/static/js/main.40f7454b.js.map"
   },
   "entrypoints": [
     "static/css/main.fb91f24f.css",
-    "static/js/main.951fcbab.js"
+    "static/js/main.40f7454b.js"
   ]
 }
