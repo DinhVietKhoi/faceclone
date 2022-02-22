@@ -25,7 +25,7 @@ function Loginform({check,user,handleUsercurrent,handleChecklogin}) {
             return f.username === values.userName && f.password === values.passWord
           })
           if (checkResult.length<1 || checkResult === undefined){
-            window.location.href="/";
+            window.location.href="/faceclone";
             // window.onload()
             window.alert("Sai thông tin tài khoản mật khẩu rồi bạn :>")
           }
@@ -67,7 +67,7 @@ function Loginform({check,user,handleUsercurrent,handleChecklogin}) {
           )
         }
         <button type="submit">Log in</button>
-        <Link to="/faceclone/Forgot-password" >Forgot password?</Link>
+        <Link to="/faceclone" >Forgot password?</Link>
         <button onClick={check}>Create a new account</button>
     </form>
   )
