@@ -3,7 +3,6 @@ import { Link, NavLink } from 'react-router-dom'
 import '../sass/header.scss'
 import Avatar from './Avatar'
 function Header({userCurrent,user,handleChecklogin}) {
-  
   return (
     <div className='header'>
       <div className="container">

@@ -3,13 +3,13 @@ import Listfriend from '../components/Listfriend'
 import Post from '../components/Post'
 import Shortcut from '../components/Shortcut'
 
-function Body() {
+function Body({userCurrent}) {
   return (
     <div className='body'>
               <div className="container">
                 <div className='body__container'>
                   <div className='body__left'>
-                    <Shortcut />
+                    <Shortcut userCurrent={userCurrent}/>
                   </div>
                   <div className='body__middle'>
                     <Post />

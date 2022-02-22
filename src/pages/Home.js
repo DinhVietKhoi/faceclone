@@ -13,7 +13,7 @@ function Home({userCurrent,user,handleChecklogin}) {
       <Header userCurrent={userCurrent} user={user} handleChecklogin={handleChecklogin}/>
         
         {/* <Router user={user} handleUsercurrent={handleUsercurrent} userCurrent={userCurrent}> */}
-          <Router>
+          <Router userCurrent={userCurrent}>
             <Notfound />
             <Body />
           </Router>

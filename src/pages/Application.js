@@ -12,7 +12,7 @@ import Header from '../components/Header';
 function Application() {
   //Check login storelocal
   // console.log('hhiih',Kq);
-  const storeCheck = JSON.parse(localStorage.getItem('checkLogin'));
+  // const storeCheck = JSON.parse(localStorage.getItem('checkLogin'));
   //Get user firebase
   const [user,setUser] = useState([])
 
@@ -44,11 +44,6 @@ function Application() {
   })
   },[])
   return (
-    // <>
-    //     {checkLogin === false&&<Login user={user} handleUsercurrent={handleUsercurrent} handleChecklogin={handleChecklogin}/>}
-    //     {checkLogin===true&&<Home userCurrent={userCurrent} user={user} handleChecklogin={handleChecklogin}/>}
-    // </>
-    
     <>
         {
           checkLogin === false && <Login user={user} handleUsercurrent={handleUsercurrent} handleChecklogin={handleChecklogin}/>
