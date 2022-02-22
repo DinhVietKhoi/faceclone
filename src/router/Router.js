@@ -9,9 +9,9 @@ import Login from '../pages/Login'
 function Router({user,handleUsercurrent,userCurrent}) {
   return (
     <Routes>
-        <Route path='/faceclone/*' element={<Notfound />}/>
-        <Route path='/faceclone' element={<Body userCurrent={userCurrent}/>}/>
-        <Route path='/faceclone' element={<Application userCurrent={userCurrent}/>}/>
+        <Route path='./faceclone/*' element={<Notfound />}/>
+        <Route path='./faceclone/' element={<Body userCurrent={userCurrent}/>}/>
+        <Route path='./faceclone/' element={<Application userCurrent={userCurrent}/>}/>
     </Routes>
   )
 }

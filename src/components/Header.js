@@ -10,7 +10,7 @@ function Header({userCurrent,user,handleChecklogin}) {
         <div className='header__container'>
           <div className="header__left">
             <div className="header__left-logo">
-              <Link to="/faceclone/">
+              <Link to="/faceclone">
                 <i className="fa-brands fa-facebook-f"></i>
               </Link>
             </div>
@@ -64,7 +64,9 @@ function Header({userCurrent,user,handleChecklogin}) {
                 <i className="fa-solid fa-bell"></i>
               </li>
               <li className='header__right-item'>
-                <i className="fa-solid fa-arrow-right-from-bracket" onClick={handleChecklogin}></i>
+                <Link to="/faceclone/">
+                  <i className="fa-solid fa-arrow-right-from-bracket" onClick={handleChecklogin}></i>
+                </Link>
               </li>
             </ul>
           </div>
