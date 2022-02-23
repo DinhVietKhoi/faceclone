@@ -10,6 +10,7 @@ import Login from './Login'
 import Header from '../components/Header';
 
 function Application() {
+  const [userImg,setUserimg] = useState([])
   //Check login storelocal
   // console.log('hhiih',Kq);
   // const storeCheck = JSON.parse(localStorage.getItem('checkLogin'));
@@ -30,19 +31,16 @@ function Application() {
       setChecklogin(checkLogin1);
     
   }
+
   // console.log("local",storeCheck)
   // console.log("usestate",checkLogin)
   useEffect(()=>{
-// Get database 
+// Get user database 
   onValue((ref(db,'user')),(snapshot)=>{
     const data = snapshot.val();
-    const {id,name} = data;
-    const listuser = Object.values(data)
-    listuser.map(l=>{
-      setUser(pre=>[...pre,l])
-    })
+    setUser(Object.values(data))
   })
-  },[])
+},[db])
   return (
     <>
         {

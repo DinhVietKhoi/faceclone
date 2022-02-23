@@ -15,14 +15,14 @@ const firebaseConfig = {
   messagingSenderId: "12655981992",
   appId: "1:12655981992:web:c6d4f7d6755c97bcdbd99d",
   measurementId: "G-Y32FBCKVG3"
-  // apiKey: process.env.API,
-  // authDomain: process.env.AUTH,
-  // databaseURL: process.env.DATABASE,
-  // projectId: process.env.PROJECT,
-  // storageBucket: process.env.STORAGE,
-  // messagingSenderId: process.env.MESS,
-  // appId: process.env.APP,
-  // measurementId: process.env.MEAS
+  // apiKey: process.env.REACT_APP_API,
+  // authDomain: process.env.REACT_APP_AUTH,
+  // databaseURL: process.env.REACT_APP_DATABASE,
+  // projectId: process.env.REACT_APP_PROJECT,
+  // storageBucket: process.env.REACT_APP_STORAGE,
+  // messagingSenderId: process.env.REACT_APP_MESS,
+  // appId: process.env.REACT_APP_APP,
+  // measurementId: process.env.REACT_APP_MEAS
 };
 
 // Initialize Firebase

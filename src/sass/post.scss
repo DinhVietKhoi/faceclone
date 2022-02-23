@@ -1,0 +1,68 @@
+.post{
+    margin-bottom: 20px;
+    background-color: #fff;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 1px grey;
+    &__container{
+        width: 100%;
+    }
+    &__avatar{
+        padding:10px ;
+        display: flex;
+        align-items: center;
+        & span{
+            font-weight: bold;
+            margin-left: 10px;
+        }
+    }
+    &__title{
+        padding:0 10px 10px 10px;
+    }
+    &__image{
+        & img{
+            width: 100%;
+            height: 525px;
+            object-fit: cover;
+        }
+    }
+    &__information{
+        padding:10px;
+        border-bottom: 1px solid grey;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__interact{
+        display: flex;
+
+        &-icon{
+            color:#65676B;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding:10px;
+            cursor: pointer;
+            background-color: #fff;
+            transition: all .3s;
+            & i{
+            }
+            & span{
+                font-weight: bold;
+            }
+            &:first-child{
+                border-radius: 0px 0px 0px 10px
+            }
+            &:last-child{
+                border-radius: 0px 0px 10px 0px
+            }
+            &:hover{
+                color:blue;
+                filter: brightness(80%);
+            }
+            & span{
+                margin-left: 10px;
+            }
+        }
+    }
+}

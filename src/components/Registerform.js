@@ -34,7 +34,7 @@ function Registerform({user,uncheck}) {
       console.log(`userName: ${values.userName}`)
       console.log("kiem tra:",checkRegister)
       if(checkRegister.length < 1 || checkRegister == undefined){
-        set(ref(db,`user/${uuid}`),{
+        set(ref(db,`user/${values.userName}`),{
           username:values.userName,
           password:values.passWord
         })

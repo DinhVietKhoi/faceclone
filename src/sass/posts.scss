@@ -93,6 +93,88 @@
             border-radius: 10px;
             box-shadow: 0 0 5px 1px grey;
             z-index: 1000;
+            &--top{
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                padding: 10px 10px;
+                border-bottom: 1px solid #E5E5E5;
+                & span{
+                    font-size: 21px;
+                    font-weight: bold;
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+            &--close{
+                cursor: pointer;
+                width: 35px;
+                height: 35px;
+                background-color: #E4E6EB;
+                border-radius: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: all .3s;
+                &:hover{
+                    filter: brightness(80%);
+                }
+                & i{
+                    color:#6A7179;
+                }
+            }
+            &--bottom{
+                height: 80%;
+                margin:20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                & textarea{
+                    width: 100%;
+                    resize: none;
+                    height: 100px;
+                    border: none;
+                    outline: none;
+                    font-size: 24px;
+                }
+                & input{
+                    padding:10px;
+                    border: none;
+                    border-bottom: 1px solid black;
+                    margin-bottom: 20px;
+                    outline: none;
+                }
+                & button{
+                    cursor: pointer;
+                    font-weight: bold;
+                    padding: 10px 0;
+                    margin-bottom: 40px;
+                    border-radius: 10px;
+                    border: none;
+                    color:#fff;
+                    transition: all .3s;
+                    background-color: #1B74E4;
+                    &:hover{
+                        filter:brightness(80%)
+                    }
+                }
+            }
+            &--avatar{
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+                & span{
+                    margin-left: 10px;
+                    font-weight: bold;
+                    font-size: 16px;
+                }
+                & .avatar{
+                    width: 40px;
+                    height: 40px;
+                }
+                
+            }
+            
         }
     }
 }

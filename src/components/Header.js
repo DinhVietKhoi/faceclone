@@ -1,8 +1,23 @@
 import React, { useRef, useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
+import { ref, set, getDatabase, onValue} from 'firebase/database'
+
+import db  from '../Firebase'
 import '../sass/header.scss'
 import Avatar from './Avatar'
 function Header({userCurrent,user,handleChecklogin,img}) {
+  const [check,setCheck] = useState(false)
+  const [imgInput,setImginput] = useState("");
+  const handleClick = ()=>{
+    setCheck(!check)
+  }
+  const handleSetimg = ()=>{
+    handleClick();
+    const checkImg = imgInput;
+    set(ref(db,`imgs/${userCurrent}`),{
+      img:checkImg
+    })
+  }
   return (
     <div className='header'>
       <div className="container">
@@ -48,6 +63,16 @@ function Header({userCurrent,user,handleChecklogin,img}) {
             </ul>
           </div>
           <div className='header__right'>
+            <button className='header__right-changeA' onClick={handleClick}>Đổi avatar</button>
+            {
+              check===true&&<div className='header__right-overlayA' onClick={handleClick}></div>
+            }
+            {
+              check===true&&<div className='header__right-inputA'>
+                <input placeholder='Nhập link ảnh....' onChange={(e)=>setImginput(e.target.value)}></input>
+                <button onClick={handleSetimg}>OK</button>
+              </div>
+            }
             <div className='header__right-user'>
               <Avatar img={img}/>
               <span className='header__right-nickname'>{userCurrent}</span>
