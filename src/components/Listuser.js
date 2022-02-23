@@ -15,7 +15,7 @@ function Listuser({user,img}) {
   return (
     <div className='listuser'>
         <div className='listuser__container'>
-            <h3>Người liên hệ</h3>
+            <h3>BẠN BÈ(cần có ảnh đại diện):</h3>
             <ul className='listuser__list'>
                 {/* {
                     user.map((u,index)=>[
