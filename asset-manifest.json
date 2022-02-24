@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/faceclone/static/css/main.9ad04e6a.css",
-    "main.js": "/faceclone/static/js/main.af41f9d2.js",
+    "main.js": "/faceclone/static/js/main.cdfbb489.js",
     "static/media/notfound.jpg": "/faceclone/static/media/notfound.a7a02c022931b32eb488.jpg",
     "static/media/girl.jpg": "/faceclone/static/media/girl.f1526eaa250613fc9070.jpg",
     "index.html": "/faceclone/index.html",
     "main.9ad04e6a.css.map": "/faceclone/static/css/main.9ad04e6a.css.map",
-    "main.af41f9d2.js.map": "/faceclone/static/js/main.af41f9d2.js.map"
+    "main.cdfbb489.js.map": "/faceclone/static/js/main.cdfbb489.js.map"
   },
   "entrypoints": [
     "static/css/main.9ad04e6a.css",
-    "static/js/main.af41f9d2.js"
+    "static/js/main.cdfbb489.js"
   ]
 }
