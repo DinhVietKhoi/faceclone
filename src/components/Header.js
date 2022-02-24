@@ -11,6 +11,10 @@ function Header({userCurrent,user,handleChecklogin,img}) {
   const handleClick = ()=>{
     setCheck(!check)
   }
+  const handleChecklogine = ()=>{
+    handleChecklogin()
+
+  }
   const handleSetimg = ()=>{
     handleClick();
     const checkImg = imgInput;
@@ -89,7 +93,7 @@ function Header({userCurrent,user,handleChecklogin,img}) {
               </li>
               <li className='header__right-item'>
                 <Link to="/faceclone/">
-                  <i className="fa-solid fa-arrow-right-from-bracket" onClick={handleChecklogin}></i>
+                  <i className="fa-solid fa-arrow-right-from-bracket" onClick={handleChecklogine}></i>
                 </Link>
               </li>
             </ul>

@@ -128,7 +128,7 @@ function Shortcut({userCurrent,img}) {
               check===true&&<li className='shortcut__top-item' onClick={handleZoomout}>
               <div className='shortcut__top-link'>
                 <div className='shortcut__top-i'>
-                  <i class="fa-solid fa-angles-up"></i>
+                  <i className="fa-solid fa-angles-up"></i>
                 </div>
                 <span>Rút gọn</span>
               </div>

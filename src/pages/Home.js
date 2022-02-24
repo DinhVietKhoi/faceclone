@@ -8,10 +8,11 @@ import Notfound from '../components/Notfound'
 import Router from '../router/Router'
 import '../sass/home.scss'
 import Body from './Body'
-function Home({userCurrent,user,handleChecklogin}) {
+function Home({userCurrent,user,handleChecklogin,idPost,upID}) {
   const [img,setImg] = useState("https://static2.yan.vn/YanNews/2167221/202102/facebook-cap-nhat-avatar-doi-voi-tai-khoan-khong-su-dung-anh-dai-dien-e4abd14d.jpg")
   const [i,setI] = useState("")
   const [userImage,setUserimage] = useState([]);
+  // console.log('current',userCurrent)
   useEffect(()=>{
     onValue((ref(db,`imgs/${userCurrent}`)),(snapshot)=>{
       const data = snapshot.val();
@@ -28,7 +29,7 @@ function Home({userCurrent,user,handleChecklogin}) {
   return (
     <>
       <Header userCurrent={userCurrent} user={user} handleChecklogin={handleChecklogin} img={i===""?img:i}/>
-          <Router user={user} userCurrent={userCurrent} img={i===""?img:i}>
+          <Router user={user} userCurrent={userCurrent} img={i===""?img:i} idPost={idPost} upID={upID}>
             <Notfound />
             <Body />
           </Router>

@@ -6,11 +6,11 @@ import Body from '../pages/Body'
 import Home from '../pages/Home'
 import Login from '../pages/Login'
 
-function Router({user,handleUsercurrent,userCurrent,img}) {
+function Router({user,handleUsercurrent,userCurrent,img,idPost,upID}) {
   return (
     <Routes>
         <Route path='/faceclone/*' element={<Notfound />}/>
-        <Route path='/faceclone/' element={<Body user={user} userCurrent={userCurrent} img={img}/>}/>
+        <Route path='/faceclone/' element={<Body user={user} userCurrent={userCurrent} img={img} idPost={idPost} upID={upID}/>}/>
         <Route path='/faceclone/' element={<Application userCurrent={userCurrent}/>}/>
     </Routes>
   )

@@ -5,7 +5,7 @@ import db  from '../Firebase'
 import Avatar from './Avatar'
 import '../sass/posts.scss'
 import Post from './Post'
-function Posts({img,userCurrent}) {
+function Posts({img,userCurrent,idPost,upID}) {
   const [listPost,setListpost] = useState([])
   const [text,setText] = useState("")
   const [image,setImage] = useState("")
@@ -15,9 +15,10 @@ function Posts({img,userCurrent}) {
   const string = userCurrent + " ơi, bạn đang nghĩ gì thế?"
   const handleSubmit = ()=>{
     if(text!=="" && image!==""){
+      upID();
       const image1 = image;
       const text1 = text;
-      const uuid = uid();
+      const uuid = idPost+1;
       handleCheck();
       inPut.current.value=""
       textArea.current.value=""
@@ -29,6 +30,9 @@ function Posts({img,userCurrent}) {
         name:userCurrent,
         title:text1
       })
+      set(ref(db,'idpost'),{
+        idpost:uuid
+      })
     }
     else {
       window.alert("Còn thiếu cái gì kìa bạn ơi!")
@@ -39,7 +43,7 @@ function Posts({img,userCurrent}) {
     }
 
   }
-  
+  const reverse = listPost.reduce((acc,b)=>([b,...acc]),[])
   const handleCheck = ()=>{
     setCheck(!check);
   }
@@ -93,7 +97,8 @@ function Posts({img,userCurrent}) {
         }
       </div>
       {
-        listPost.map((l,index)=>[
+        
+        reverse.map((l,index)=>[
           <Post key={index} img={l.imguser} userCurrent={l.name} title={l.title} imgPost={l.img}/>
         ])
       }

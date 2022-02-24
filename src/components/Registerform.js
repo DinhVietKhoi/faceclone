@@ -7,7 +7,6 @@ import '../sass/registerform.scss'
 import {useFormik} from 'formik'
 import * as Yup from 'yup'
 function Registerform({user,uncheck}) {
-  console.log(user);
   const formik = useFormik({
     initialValues:{
       userName:"",
@@ -31,12 +30,17 @@ function Registerform({user,uncheck}) {
       const checkRegister = user.filter(user=>{
         return user.username === values.userName
       })
-      console.log(`userName: ${values.userName}`)
-      console.log("kiem tra:",checkRegister)
+     
       if(checkRegister.length < 1 || checkRegister == undefined){
         set(ref(db,`user/${values.userName}`),{
           username:values.userName,
-          password:values.passWord
+          password:values.passWord,
+        })
+        set(ref(db,`user/${values.userName}/check`),{
+          check:false
+        })
+        set(ref(db,`imgs/${values.userName}`),{
+          img:"https://static2.yan.vn/YanNews/2167221/202102/facebook-cap-nhat-avatar-doi-voi-tai-khoan-khong-su-dung-anh-dai-dien-e4abd14d.jpg"
         })
         window.alert("Dang ky thanh cong!")
         uncheck();
@@ -46,7 +50,6 @@ function Registerform({user,uncheck}) {
       }
 
       
-      console.log(checkRegister)
     }
   })
   

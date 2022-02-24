@@ -1,6 +1,8 @@
 import React, { useRef, useState } from 'react'
 import { Link } from 'react-router-dom';
 import {useFormik} from 'formik'
+import { ref, set, getDatabase, onValue} from 'firebase/database'
+import db  from '../Firebase'
 import * as Yup from 'yup'
 import '../sass/loginform.scss'
 function Loginform({check,user,handleUsercurrent,handleChecklogin}) {
@@ -33,6 +35,10 @@ function Loginform({check,user,handleUsercurrent,handleChecklogin}) {
             // window.location.href="/faceclone/";
             inputUsername.current.value=""
             inputPassword.current.value=""
+
+            set(ref(db,`user/${values.userName}/check`),{
+              check:true
+            })
             handleUsercurrent(values.userName)  
             handleChecklogin()
           }
